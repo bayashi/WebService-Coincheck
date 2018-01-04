@@ -1,6 +1,8 @@
-use strict;
-use Test::More tests => 1;
+use Test::AllModules;
 
-BEGIN {
-    use_ok 'WebService::Coincheck';
-}
+all_ok(
+    search_path => 'WebService::Coincheck',
+    use_ok      => 1,
+    fork        => 1,
+    shuffle     => 1,
+);

@@ -2,9 +2,18 @@ requires 'perl', '5.008005';
 requires 'strict';
 requires 'warnings';
 requires 'Carp';
+requires 'HTTP::Tiny';
+requires 'Time::HiRes';
+requires 'URI::Query';
+requires 'Digest::SHA';
+requires 'Class::Accessor::Lite';
+requires 'Class::Load';
+requires 'String::CamelCase';
+requires 'JSON';
 
 on 'test' => sub {
     requires 'Test::More', '0.88';
+    requires 'Test::AllModules';
 };
 
 on 'configure' => sub {
