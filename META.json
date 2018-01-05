@@ -53,6 +53,42 @@
       "WebService::Coincheck" : {
          "file" : "lib/WebService/Coincheck.pm",
          "version" : "0.01"
+      },
+      "WebService::Coincheck::Account" : {
+         "file" : "lib/WebService/Coincheck/Account.pm"
+      },
+      "WebService::Coincheck::BankAccount" : {
+         "file" : "lib/WebService/Coincheck/BankAccount.pm"
+      },
+      "WebService::Coincheck::Borrow" : {
+         "file" : "lib/WebService/Coincheck/Borrow.pm"
+      },
+      "WebService::Coincheck::Deposit" : {
+         "file" : "lib/WebService/Coincheck/Deposit.pm"
+      },
+      "WebService::Coincheck::Leverage" : {
+         "file" : "lib/WebService/Coincheck/Leverage.pm"
+      },
+      "WebService::Coincheck::Order" : {
+         "file" : "lib/WebService/Coincheck/Order.pm"
+      },
+      "WebService::Coincheck::OrderBook" : {
+         "file" : "lib/WebService/Coincheck/OrderBook.pm"
+      },
+      "WebService::Coincheck::Send" : {
+         "file" : "lib/WebService/Coincheck/Send.pm"
+      },
+      "WebService::Coincheck::Ticker" : {
+         "file" : "lib/WebService/Coincheck/Ticker.pm"
+      },
+      "WebService::Coincheck::Trade" : {
+         "file" : "lib/WebService/Coincheck/Trade.pm"
+      },
+      "WebService::Coincheck::Transfer" : {
+         "file" : "lib/WebService/Coincheck/Transfer.pm"
+      },
+      "WebService::Coincheck::Withdraw" : {
+         "file" : "lib/WebService/Coincheck/Withdraw.pm"
       }
    },
    "release_status" : "stable",
