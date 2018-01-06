@@ -272,12 +272,6 @@ calling API
 
 =head1 REPOSITORY
 
-=begin html
-
-<a href="http://travis-ci.org/bayashi/WebService-Coincheck"><img src="https://secure.travis-ci.org/bayashi/WebService-Coincheck.png"/></a> <a href="https://coveralls.io/r/bayashi/WebService-Coincheck"><img src="https://coveralls.io/repos/bayashi/WebService-Coincheck/badge.png?branch=master"/></a>
-
-=end html
-
 WebService::Coincheck is hosted on github: L<http://github.com/bayashi/WebService-Coincheck>
 
 I appreciate any feedback :D
