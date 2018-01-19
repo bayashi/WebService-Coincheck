@@ -47,13 +47,13 @@ sub new {
         %args,
     }, $class;
 
-    $self->_initialize;
+    $self->_initialize($args{client_opt});
 
     return $self;
 }
 
 sub _initialize {
-    my ($self) = @_;
+    my ($self, $client_opt) = @_;
 
     $self->client(
         HTTP::Tiny->new(
@@ -63,6 +63,8 @@ sub _initialize {
                 'ACCESS-KEY'   => $self->access_key,
             },
             timeout => 15,
+            verify_SSL => 1,
+            %{$client_opt || {}},
         )
     );
 
