@@ -86,10 +86,10 @@ sub _initialize {
 }
 
 sub set_signature {
-    my ($self, $req_url) = @_;
+    my ($self, $req_url, $body) = @_;
 
     $self->nonce(int(time * 10000));
-    $self->signature(hmac_sha256_hex($self->nonce . $req_url, $self->secret_key));
+    $self->signature(hmac_sha256_hex($self->nonce . $req_url . ($body || ''), $self->secret_key));
 }
 
 sub request {
@@ -113,14 +113,13 @@ sub request {
     }
     elsif ($method =~ m!^(?:post|delete)$!i) {
         my $req_url = join '', $self->api_base, $req_path;
-        $self->set_signature($req_url);
+        my $content = $query ? JSON::encode_json($query) : '';
+        $self->set_signature($req_url, $content);
         $res = $self->client->request(
-            'POST',
+            uc $method,
             $req_url,
             {
-                content => {
-                    %{$query || {}},
-                },
+                content => $content,
                 headers => {
                     'ACCESS-NONCE'     => $self->nonce,
                     'ACCESS-SIGNATURE' => $self->signature,
